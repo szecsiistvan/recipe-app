@@ -2,11 +2,12 @@ const app = require('../app');
 const express = require('express');
 const User = require('../models/recipe');
 const Recipe = require('../models/recipe');
-const router = new express.Router();
 const mongoose = require('mongoose');
+const auth = require('../middleware/auth');
+const router = new express.Router();
 
 
-router.post('/recipes', async (req, res) => {
+router.post('/recipes',auth, async (req, res) => {
 
     const newArray = req.body.ingredients.map((value) => {
         const id = mongoose.Types.ObjectId(value.ingredient.id);

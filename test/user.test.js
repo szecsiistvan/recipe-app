@@ -1,6 +1,7 @@
 const request = require('supertest');
 const app = require('../src/app');
 const User = require('../src/models/user');
+const jwt = require('jsonwebtoken');
 const {
     setupDatabase,
     userOne,
@@ -15,19 +16,15 @@ const {
 
 beforeEach(setupDatabase);
 
-test('This is just a test test', () => {
-
-    console.log('success!!!')
-});
-
 test('USER - POST - /users - OK cases', async () => {
 
     const userOne = new User({
         name: "Valaki",
         role: "NORMAL",
-        email: "c@cc.hu",
-        password: "asjdfoisajfdioj"
+        email: "c@c.hu",
+        password: "asjdfoisajfdioj",
     });
+
 
     await request(app)
         .post('/users')
