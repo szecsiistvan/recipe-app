@@ -39,12 +39,7 @@ const userSchema = new mongoose.Schema({
                     throw new Error('Invalid role');
                 }
             }
-        }, tokens: [{
-            token: {
-                type: String,
-                required: true
-            }
-        }]
+        }
     },
     {
         timestamps: true
