@@ -12,7 +12,7 @@ const recipeSchema = new mongoose.Schema({
     description: {
         type: String,
         required: true,
-        minLength: 20,
+        minlength: 20,
     },
     ingredients: [{
         ingredient: {

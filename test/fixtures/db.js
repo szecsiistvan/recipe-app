@@ -137,6 +137,7 @@ const testDB = async () => {
     await new Ingredient(ingredientThree).save();
     await new Recipe(recipeOne).save();
     await new Recipe(recipeTwo).save();
+    await new Recipe(recipeThree).save();
 };
 
 module.exports = {testDB, userOneID,userTwoID, userThreeID, ingredientOneId,ingredientTwoId,ingredientThreeId,recipeOneId,recipeTwoId,recipeThreeId};

@@ -15,7 +15,6 @@ const auth = async (req, res, next) => {
 
     const user = await User.findOne({_id});
 
-
         try {
 
             if (!user) {
@@ -29,9 +28,6 @@ const auth = async (req, res, next) => {
 
             res.status(401).send({error: 'Please authenticate.'})
         }
-
-
-
 
 };
 

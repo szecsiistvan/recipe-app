@@ -101,5 +101,5 @@ test('INGREDIENT - DELETE - /ingredients - OK cases', async () => {
 
     const allIngredient = await Ingredient.find({});
 
-    expect(allIngredient.length).toEqual(2);
+    expect(allIngredient.length).toEqual(2)
 });
